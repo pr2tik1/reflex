@@ -926,7 +926,7 @@ class BaseState(Base, ABC, extra=pydantic.Extra.allow):
         if not types.is_valid_var_type(prop._var_type):
             raise VarTypeError(
                 "State vars must be primitive Python types, "
-                "Plotly figures, Pandas dataframes, "
+                "Plotly figures, Pandas dataframes, " #Bokeh ?
                 "or subclasses of rx.Base. "
                 f'Found var "{prop._js_expr}" with type {prop._var_type}.'
             )

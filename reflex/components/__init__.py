@@ -12,6 +12,7 @@ _SUBMODULES: set[str] = {
     "markdown",
     "moment",
     "plotly",
+    "bokeh",
     "radix",
     "react_player",
     "sonner",

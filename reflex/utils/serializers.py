@@ -363,6 +363,26 @@ except ImportError:
 
 
 try:
+    from bokeh.io import save, output_notebook
+    from bokeh.plotting import figure
+    from bokeh.embed import json_item
+
+    @serializer
+    def serialize_bokeh_figure(bokeh_figure: figure) -> dict:
+        """Serialize a Bokeh figure.
+
+        Args:
+            bokeh_figure: The Bokeh figure to serialize.
+
+        Returns:
+            The serialized Bokeh figure.
+        """
+        return json_item(bokeh_figure)
+
+except ImportError:
+    pass
+
+try:
     import base64
     import io
 

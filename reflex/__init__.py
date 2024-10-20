@@ -283,6 +283,7 @@ _MAPPING: dict = {
     "components.markdown": ["markdown"],
     **RADIX_MAPPING,
     "components.plotly": ["plotly"],
+    "components.bokeh": ["bokeh"],
     "components.react_player": ["audio", "video"],
     **COMPONENTS_CORE_MAPPING,
     "components.datadisplay.code": [
